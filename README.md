@@ -47,7 +47,7 @@ Don't forget to give a star if you like.
    ~~~bash
    python3 AutoOS.py
    ~~~
-   The error message will appear as follows:
+   When first run it, the error message will appear as follows:
    ~~~bash
    kconfiglib.KconfigError: kernel/module/Kconfig:4: error: couldn't parse 'modules': unrecognized construct
    ~~~
