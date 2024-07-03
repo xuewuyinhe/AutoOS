@@ -9,7 +9,7 @@ Our work `AutoOS: Make Your OS More Powerful by Exploiting Large Language Models
 - `.config` file from your OS distribution for initial configuration
 - LLM API key: The specific version of the LLM we use in the exeriment is gpt-3.5-turbo-0613 of openai (2023.6.13 - 2024.9). You can use the latest gpt-3.5-turbo version after 2024.9.
 ## Quick start
-0. Make sure you can replace the configuration of the OS by mannual in your environment. For example, manually modify only one insignificant option in the configuration and ensure it can be successfully compiled and installed.
+0. Make sure you can replace the configuration of the OS by mannual in your environment. 
 1. Inspect the Linux kernel version and .config file of the OS distribution that needs optimization.
 2. Prepare the corresponding Linux version's source code repository. Then, clone and download this project, placing all files within the Linux kernel source repository.
    ```bash
