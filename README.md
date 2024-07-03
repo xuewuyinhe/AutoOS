@@ -28,8 +28,8 @@ Our work `AutoOS: Make Your OS More Powerful by Exploiting Large Language Models
 
 5. Run AutoOS:
    Using the command below
-   ```bash
-   python3 	AutoOS.py```
+  '''
+   python3 	AutoOS.py'''
 
    -The error message will appear as follows:
    ```bash
