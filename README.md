@@ -10,17 +10,19 @@ Our work `AutoOS: Make Your OS More Powerful by Exploiting Large Language Models
 
 ## Quick start
 
-1. **Inspect the Linux kernel version and .config file of the OS distribution that needs optimization.**
-2. **Prepare the corresponding Linux version's source code repository.**
+1. Inspect the Linux kernel version and .config file of the OS distribution that needs optimization.
+2. Prepare the corresponding Linux version's source code repository, then clone and download this project , put all files in the Linux kernel source repository..
    ```bash
    git clone [insert link to Linux kernel source repository]
    cd linux
-3. **Configure the kernel using the command below:**
+   git clone [this project]
+   mv AutoOS/* ./
+3. Init the kernel configuration using the command below:
    ```bash
-    make menuconfig ARCH=riscv (change riscv to the arch you use)
-4. **Copy the .config file from the OS distribution to the Linux version's source code repository, then change the name  using the command below:**
+    make menuconfig ARCH=riscv (change riscv to the arch you use, save to .config)
+4. Copy the .config file from the OS distribution to the Linux version's source code repository, then change the name  using the command below:
    ```bash
    cp .config .config_base
-5. **put your openai key in key.txt, then init the environment using the command below:**
+5. put your openai key in key.txt, then init the environment using the command below:
    ```bash
    source ./init_env.sh
