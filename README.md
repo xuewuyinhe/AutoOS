@@ -9,7 +9,7 @@ Our work `AutoOS: Make Your OS More Powerful by Exploiting Large Language Models
 - `.config` file from your OS distribution for initial configuration
 
 ## Quick start
-
+0. Make sure you can replace the configuration of the OS by mannual in your environment. For example, manually modify only one insignificant option in the configuration and ensure it can be successfully compiled and installed.
 1. Inspect the Linux kernel version and .config file of the OS distribution that needs optimization.
 2. Prepare the corresponding Linux version's source code repository. Then, clone and download this project, placing all files within the Linux kernel source repository.
    ```bash
@@ -18,11 +18,12 @@ Our work `AutoOS: Make Your OS More Powerful by Exploiting Large Language Models
    git clone [this project]
    mv AutoOS/* ./
    
-3. Copy the .config file from the OS distribution to the Linux version's source code repository, then change the name  using the command below:
+3. Copy the .config file from the OS distribution that needs optimization to the Linux version's source code repository, then change the name  using the command below:
    ```bash
    cp .config .config_base
    
 4. Init the environment
+   
    The init_env.sh is as follows:
    ~~~bash
    export srctree=.
@@ -39,7 +40,7 @@ Our work `AutoOS: Make Your OS More Powerful by Exploiting Large Language Models
    ~~~bash
    source ./init_env.sh
    ~~~
-6. Run AutoOS:
+5. Run AutoOS:
    Use the command below
    ~~~bash
    python3 AutoOS.py
@@ -75,14 +76,14 @@ Our work `AutoOS: Make Your OS More Powerful by Exploiting Large Language Models
     ~~~bash
     python3 AutoOS.py
     ~~~
-7. Generate new config files using the command below:
+6. Generate new config files using the command below:
     ~~~bash
     python3 append.py
     ~~~
     The newly generated configuration file is located at ./files/config
-8. Using the following command, load the newly generated ./files/config file in a graphical interface, and then save it as ./.config in the current directory.
+7. Using the following command, load the newly generated ./files/config file in a graphical interface, and then save it as ./.config in the current directory.
     ~~~bash
     menuconfig ARCH=x86 (change riscv to the arch you use) 
     ~~~
-9. Compile and install a new OS with the new config
+8. Compile and install a new OS with the new config
    
