@@ -91,7 +91,7 @@ Don't forget to give a star if you like.
     menuconfig ARCH=x86 (change riscv to the arch you use) 
     ~~~
 9. Compile and install a new OS with the new config， then evaluate it using benchmark, such as unixbench.
-10. Steps 5-8 constitute a single search, with 24-48 searches recommended. If the generated operating system fails to boot, you can return the errors and modified options to your LLM for key option identification. If not successful, use a binary search to identify the problematic option . Remember the previously identified options and filter out those in subsequent generated configurations. The modified options in one search is in ./output.txt  generated after running AutoOS.py. Remove the the problematic options in output.txt and run append.py again to generated a viable OS configuration.
+10. Steps 5-8 constitute a single search, with 24-48 searches recommended. If the generated OS fails to boot, you can return the errors and modified options to your LLM for identification. If not successful, use a binary search to identify the problematic option . Remember the previously identified options and filter out those in subsequent generated configurations. The modified options in one search is in ./output.txt  generated after running AutoOS.py. Remove the the problematic options in output.txt and run append.py again to generated a viable OS configuration.
 
 You can use the above commands according to your own compiled OS environment to write a shell script that automates the process of searching, compiling, and installing.
 ## Citation
