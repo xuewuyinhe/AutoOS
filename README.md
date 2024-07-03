@@ -72,7 +72,7 @@ Our work `AutoOS: Make Your OS More Powerful by Exploiting Large Language Models
       
                 If unsure, say Y.
     ~~~
-    Then use  the command below again:
+    Then use  the command below again to start one search:
     ~~~bash
     python3 AutoOS.py
     ~~~
@@ -81,9 +81,12 @@ Our work `AutoOS: Make Your OS More Powerful by Exploiting Large Language Models
     python3 append.py
     ~~~
     The newly generated configuration file is located at ./files/config
-7. Using the following command, load the newly generated ./files/config file in a graphical interface, and then save it as ./.config in the current directory.
+
+    If the program runtime is too short (<1min) or too long (>15min), it is often due to LLM hallucinations causing incorrect output formats in the initial attempts or getting stuck searching through hardware-related configuration subtrees. Please interrupt the program and rerun the command.
+
+8. Using the following command, load the newly generated ./files/config file in a graphical interface, and then save it as ./.config in the current directory.
     ~~~bash
     menuconfig ARCH=x86 (change riscv to the arch you use) 
     ~~~
-8. Compile and install a new OS with the new config
-   
+9. Compile and install a new OS with the new config， then evaluate it using benchmark, such as unixbench.
+10. Steps 5-8 can be performed in a single search to generate an OS. It is recommended to perform 24-48 searches. If the generated operating system fails to boot, you can return the errors and modified options to your LLM for key option identification. If the identification is not successful, use a binary search method to identify the problematic option until it boots successfully. Remember the previously identified key boot options and filter out those options in subsequent generated configurations.
