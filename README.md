@@ -93,7 +93,7 @@ Don't forget to give a star if you like.
 9. Compile and install a new OS with the new config， then evaluate it using benchmark, such as unixbench.
 10. Steps 5-8 constitute a single search, with 24-48 searches recommended. If the generated operating system fails to boot, you can return the errors and modified options to your LLM for key option identification. If the identification is not successful, use a binary search method to identify the problematic option until it boots successfully. Remember the previously identified key boot options and filter out those options in subsequent generated configurations. The modified options in one search is in ./output.txt, which is generated after run AutoOS.py, remove the the problematic options in output.txt and run append.py again to generated a viable OS configuration.
 
-You can use the above commands according your own compiled OS environment to write a shell script that automates the process of searching, compiling, and installing.
+You can use the above commands according to your own compiled OS environment to write a shell script that automates the process of searching, compiling, and installing.
 ## Citation
 If you are using AutoOS framework or code for your project , please cite the following paper:
 ~~~
