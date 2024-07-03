@@ -23,3 +23,6 @@ Our work `AutoOS: Make Your OS More Powerful by Exploiting Large Language Models
 4. **Copy the .config file from the OS distribution to the Linux version's source code repository, then change the name  using the command below:**
    ```bash
    cp .config .config_base
+5. **put your openai key in key.txt, then init the environment using the command below:**
+   ```bash
+   source ./init_env.sh
