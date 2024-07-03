@@ -32,10 +32,10 @@ Our work `AutoOS: Make Your OS More Powerful by Exploiting Large Language Models
    python3 	AutoOS.py'''
 
    -The error message will appear as follows:
-   ```bash
+   ~~~bash
    kconfiglib.KconfigError: kernel/module/Kconfig:4: error: couldn't parse 'modules': unrecognized construct
-
-   -To disable module functionality, delete the problematic code located under kernel/module/Kconfig(according to the message). The code to remove is as follows:
+   ~~~
+   To disable module functionality, delete the problematic code located under kernel/module/Kconfig(according to the message). The code to remove is as follows:
     ```bash
        menuconfig MODULES
               bool "Enable loadable module support"
@@ -57,3 +57,4 @@ Our work `AutoOS: Make Your OS More Powerful by Exploiting Large Language Models
                 this).
       
                 If unsure, say Y.
+    ~~~
