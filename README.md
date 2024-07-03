@@ -1,5 +1,5 @@
 # AutoOS
-AutoOS is a framework designed to optimize specific OS distributions by automatically modifying Linux kernel configurations without human intervention using LLMs, primarily for AIoT scenarios.
+AutoOS is a framework designed to optimize the Linux kernel configurations of specific OS distributions without human intervention using LLMs, primarily for AIoT scenarios.
 
 Our work `AutoOS: Make Your OS More Powerful by Exploiting Large Language Models` has been published at ICML 2024. We welcome your attention.
 
