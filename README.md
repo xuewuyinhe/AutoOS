@@ -22,11 +22,24 @@ Our work `AutoOS: Make Your OS More Powerful by Exploiting Large Language Models
    ```bash
    cp .config .config_base
    
-4. put your openai key in key.txt, then init the environment using the command below:
-   ```bash
+4. Init the environment
+   The init_env.sh is as follows:
+   ~~~bash
+   export srctree=.
+   export CC=gcc
+   export LD=ld
+   export ARCH=x86
+   export SRCARCH=x86
+   ~~~
+   Modify the ARCH and SRCARCH variable to your architecture name. Make sure that your architecture name matches the architecture name in the Linux source code. You can use the following command to view all supported architecture names in the Linux source code
+   ~~~bash
+   ls arch/
+   ~~~
+   put your openai key in key.txt, then init the environment using the command below:
+   ~~~bash
    source ./init_env.sh
-
-5. Run AutoOS:
+   ~~~
+6. Run AutoOS:
    Use the command below
    ~~~bash
    python3 AutoOS.py
@@ -62,14 +75,14 @@ Our work `AutoOS: Make Your OS More Powerful by Exploiting Large Language Models
     ~~~bash
     python3 AutoOS.py
     ~~~
-6. Generate new config files using the command below:
+7. Generate new config files using the command below:
     ~~~bash
     python3 append.py
     ~~~
     The newly generated configuration file is located at ./files/config
-7. Using the following command, load the newly generated ./files/config file in a graphical interface, and then save it as ./.config in the current directory.
+8. Using the following command, load the newly generated ./files/config file in a graphical interface, and then save it as ./.config in the current directory.
     ~~~bash
-    menuconfig ARCH=riscv (change riscv to the arch you use) 
+    menuconfig ARCH=x86 (change riscv to the arch you use) 
     ~~~
-8. Compile and install a new OS with the new config
+9. Compile and install a new OS with the new config
    
