@@ -1,14 +1,17 @@
-# AutoOS Optimization Tool
+# AutoOS source code (ICML2024)
 
 ## Overview
-AutoOS is a tool designed for optimizing the Linux kernel configuration based on specific OS distributions. This tool is developed as part of ICML 2024 research efforts.
+AutoOS is a framework designed for optimizing specific OS distributions through modifying the Linux kernel configurations automatically without human efforts,  which is mainly for AIoT scenarios.  
 
 ## Requirements
-- Linux kernel source code version [insert version here]
+- Linux kernel source code 
 - Python 3.x
-- Key file (`key.txt`) containing your OpenAI key
 - `.config` file from your OS distribution for initial configuration
 
-## Installation
+## Quick start
 
-1. **Clone Linux Kernel Source:**
+1. **Inspect the Linux kernel version and .config file of the OS distribution that needs optimization.**
+2. **Prepare the corresponding Linux version's source code repository.**
+   ```bash
+   git clone [insert link to Linux kernel source repository]
+   cd linux
