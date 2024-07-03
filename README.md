@@ -1,4 +1,4 @@
-# AutoOS source code (ICML2024)
+# AutoOS
 
 ## Overview
 AutoOS is a framework designed to optimize specific OS distributions by automatically modifying Linux kernel configurations without human intervention, primarily for AIoT scenarios.
