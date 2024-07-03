@@ -37,7 +37,7 @@ Our work `AutoOS: Make Your OS More Powerful by Exploiting Large Language Models
    ~~~
    To disable module functionality, delete the problematic code located under kernel/module/Kconfig (The place is according to the message). The code to remove is as follows:
    ~~~bash
-       menuconfig MODULES
+   menuconfig MODULES
               bool "Enable loadable module support"
               modules
               help
@@ -62,3 +62,14 @@ Our work `AutoOS: Make Your OS More Powerful by Exploiting Large Language Models
     ~~~bash
     python3 AutoOS.py
     ~~~
+6. Generate new config files using the command below:
+    ~~~bash
+    python3 append.py
+    ~~~
+    The newly generated configuration file is located at ./files/config
+7. Using the following command, load the newly generated ./files/config file in a graphical interface, and then save it as ./.config in the current directory.
+    ~~~bash
+    menuconfig ARCH=riscv (change riscv to the arch you use) 
+    ~~~
+8. Compile and install a new OS with the new config
+   
