@@ -3,6 +3,7 @@ AutoOS is the first framework designed to optimize the Linux kernel configuratio
 
 Our work `AutoOS: Make Your OS More Powerful by Exploiting Large Language Models` has been published at ICML 2024. We welcome your attention.
 
+Give a star if you like.
 
 ## Requirements
 - Linux kernel source code 
@@ -91,3 +92,13 @@ Our work `AutoOS: Make Your OS More Powerful by Exploiting Large Language Models
     ~~~
 9. Compile and install a new OS with the new config， then evaluate it using benchmark, such as unixbench.
 10. Steps 5-8 constitute a single search, with 24-48 searches recommended. If the generated operating system fails to boot, you can return the errors and modified options to your LLM for key option identification. If the identification is not successful, use a binary search method to identify the problematic option until it boots successfully. Remember the previously identified key boot options and filter out those options in subsequent generated configurations. The modified options in one search is in ./output.txt, which is generated after run AutoOS.py, remove the the problematic options in output.txt and run append.py again to generated a viable OS configuration.
+
+##Citation
+If you are using AutoOS framework or code for your project , please cite the following paper:
+~~~
+@inproceedings{chenautoos,
+  title={AutoOS: Make Your OS More Powerful by Exploiting Large Language Models},
+  author={Chen, Huilai and Wen, Yuanbo and Cheng, Limin and Kuang, Shouxu and Liu, Yumeng and Li, Weijia and Li, Ling and Zhang, Rui and Song, Xinkai and Li, Wei and others},
+  booktitle={Forty-first International Conference on Machine Learning}
+}
+~~~
