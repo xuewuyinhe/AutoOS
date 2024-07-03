@@ -86,7 +86,7 @@ Don't forget to give a star if you like.
 
     If the program runtime is too short (<1min) or too long (>15min), it is often due to LLM hallucinations causing incorrect output formats in the initial attempts or getting stuck searching through hardware-related configuration subtrees. Please interrupt the program and rerun the command.
 
-8. Using the following command, load the newly generated ./files/config file in a graphical interface, and then save it as ./.config in the current directory.
+8. Using the following command, load the newly generated ./files/config file, and then save it as ./.config in the current directory.
     ~~~bash
     menuconfig ARCH=x86 (change riscv to the arch you use) 
     ~~~
