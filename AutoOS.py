@@ -336,9 +336,10 @@ def main(mode = 2, de = 1, we = 300, save_cycle = 5):
                            print("pwd directory")
                            print(words_caidan)
                    if count==2 and mode==2:
-                       print("first level mode 2")
-                       caidan_prompt= caidan_prompt_first       
-                   words_caidan = caidan_prompt+words_caidan
+                       print("first level mode 2")                           
+                       words_caidan = caidan_prompt_first +words_caidan
+                   else:
+                       words_caidan = caidan_prompt+words_caidan
                    if de==1:
                            print("directory answer:")
                    ans1=talk.ask(words_caidan,6)
